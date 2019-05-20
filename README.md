@@ -1,36 +1,36 @@
-# vue-text-ellipsis
+# vue-text-truncate
 Vue component - Omits the text that exceeds the specified height
 
 ## Example
-https://112ka.github.io/example/vue-text-ellipsis/
+https://112ka.github.io/example/vue-text-truncate/
 
 ## Install
 
 ### Install component
 ```html
-<script src="vue-text-ellipsis.umd.js"></script>
+<script src="vue-text-truncate.umd.js"></script>
 <script>
-Vue.use(TextEllipsis)
+Vue.use(TextTruncate)
 </script>
 ```
 
 or
 
 ```
-yarn add vue-text-ellipsis
+yarn add vue-text-truncate
 or
-npm install vue-text-ellipsis
+npm install vue-text-truncate
 ```
 
 ```js
-import TextEllipsis from 'vue-text-ellipsis'
-Vue.use(TextEllipsis)
+import TextTruncate from 'vue-text-truncate'
+Vue.use(TextTruncate)
 ```
 
 ## Usage
 ```vue
 <div style="height:100px;"> <!-- Wrapper element with specified height -->　
-<TextEllipsis>Some long text.</TextEllipsis>
+<TextTruncate>Some long text.</TextTruncate>
 </div>
 ```
 

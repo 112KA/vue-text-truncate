@@ -1,11 +1,11 @@
 // vue コンポーネントのインポート
-import component from './TextEllipsis.vue';
+import component from './TextTruncate.vue';
 
 // Vue.use() によって実行される install 関数を定義
 export function install(Vue) {
 	if (install.installed) return;
 	install.installed = true;
-	Vue.component('TextEllipsis', component);
+	Vue.component('TextTruncate', component);
 }
 
 // Vue.use() のためのモジュール定義を作成

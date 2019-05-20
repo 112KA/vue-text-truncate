@@ -4,7 +4,7 @@ import buble from 'rollup-plugin-buble'; // 適切にブラウザをサポート
 export default {
     input: 'src/wrapper.js', // Path relative to package.json
     output: {
-        name: 'TextEllipsis',
+        name: 'TextTruncate',
         exports: 'named',
     },
     plugins: [
