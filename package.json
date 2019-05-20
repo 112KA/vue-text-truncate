@@ -4,6 +4,10 @@
   "author": "112KA",
   "license": "MIT",
   "main": "dist/vue-text-ellipsis.esm.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/112KA/vue-text-ellipsis"
+  },
   "scripts": {
     "serve": "vue-cli-service serve",
     "build:example": "vue-cli-service build --dest example",
