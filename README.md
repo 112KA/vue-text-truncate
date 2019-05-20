@@ -1,26 +1,39 @@
 # vue-text-ellipsis
+Vue component - Omits the text that exceeds the specified height
 
-## Project setup
-```
-yarn install
-```
+## Example
+https://112ka.github.io/example/vue-text-ellipsis/
 
-### Compiles and hot-reloads for development
-```
-yarn run serve
-```
+## Install
 
-### Compiles and minifies for production
-```
-yarn run build
-```
-
-### Run your tests
-```
-yarn run test
+### Install component
+```html
+<script src="vue-text-ellipsis.umd.js"></script>
+<script>
+Vue.use(TextEllipsis)
+</script>
 ```
 
-### Lints and fixes files
+or
+
 ```
-yarn run lint
+yarn add vue-text-ellipsis
+or
+npm install vue-text-ellipsis
 ```
+
+```js
+import TextEllipsis from 'vue-text-ellipsis'
+Vue.use(TextEllipsis)
+```
+
+## Usage
+```vue
+<div style="height:100px;"> <!-- Wrapper element with specified height -->　
+<TextEllipsis>Some long text.</TextEllipsis>
+</div>
+```
+
+## Licensing
+
+MIT
