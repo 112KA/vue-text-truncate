@@ -24,7 +24,7 @@ npm install vue-text-truncate
 
 ```js
 import TextTruncate from 'vue-text-truncate'
-Vue.use(TextTruncate)
+Vue.component('TextTruncate', TextTruncate)
 ```
 
 ## Usage

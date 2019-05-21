@@ -44,24 +44,31 @@ export default {
 
       this.$el.appendChild(temporary);
 
-      // 指定した高さになるまで、20文字ずつ消去していく(最適化のため)
-      while (s.length > 0 && temporary.clientHeight > this.$el.clientHeight) {
-        s = s.substr(0, s.length - 20);
+      if (temporary.clientHeight > this.$el.clientHeight) {
+        // 指定した高さになるまで、20文字ずつ消去していく(最適化のため)
+        while (s.length > 0 && temporary.clientHeight > this.$el.clientHeight) {
+          s = s.substr(0, s.length - 20);
+          temporary.textContent = s + "...";
+        }
+
+        s = this.original.substr(0, s.length + 20);
         temporary.textContent = s + "...";
+
+        // 指定した高さになるまで、1文字ずつ消去していく
+        while (s.length > 0 && temporary.clientHeight > this.$el.clientHeight) {
+          s = s.substr(0, s.length - 1);
+          temporary.textContent = s + "...";
+        }
+
+        this.$el.removeChild(temporary);
+
+        // 文章を入れ替えて、複製した要素を削除する
+        this.$el.textContent = s + "...";
       }
-
-      s = this.original.substr(0, s.length + 20);
-      temporary.textContent = s + "...";
-
-      // 指定した高さになるまで、1文字ずつ消去していく
-      while (s.length > 0 && temporary.clientHeight > this.$el.clientHeight) {
-        s = s.substr(0, s.length - 1);
-        temporary.textContent = s + "...";
+      //省略の必要無し
+      else {
+        this.$el.removeChild(temporary);
       }
-      this.$el.removeChild(temporary);
-
-      // 文章を入れ替えて、複製した要素を削除する
-      this.$el.textContent = s + "...";
     }
   }
 };
