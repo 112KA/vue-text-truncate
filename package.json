@@ -34,6 +34,7 @@
   "keywords": [
     "vue",
     "text",
-    "truncate"
+    "truncate",
+    "ellipsis"
   ]
 }

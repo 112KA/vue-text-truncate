@@ -7,6 +7,8 @@
 
 <script>
 export default {
+  name: "TextTruncate",
+
   mounted() {
     console.log(this);
     this.original = this.$slots.default[0].elm.textContent;
